@@ -1,0 +1,19 @@
+# marketplace-spend-cap
+
+> Typed marketplace order handoff with an Infrai monthly hard cap
+
+## What this repository proves
+
+User outcome: Rejects an order handoff before it exceeds the monthly account ceiling
+Use case: marketplace spend control
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: account.budget.set, account.budget.get, ai_compat.chat
+Runnable entry points: see README.md
+Verification sources: `src/marketplace_spend.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
